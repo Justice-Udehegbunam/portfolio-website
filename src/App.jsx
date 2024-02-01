@@ -9,7 +9,7 @@ import { Services } from "./components/services/Services";
 const App = () => {
   return (
     <>
-      <section>
+      <section id="Homepage">
         <Navbar />
         <Hero />
       </section>
