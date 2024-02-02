@@ -19,11 +19,15 @@ const App = () => {
       <section id="Portfolio">
         <Services />
       </section>
+      <section>
+        <Parallax type="tools" />
+      </section>
+      <section>Tools</section>
       <section id="portfolio">
         <Parallax type="portfolio" />
       </section>
       <Portfolio />
-      <section>
+      <section id="Contact">
         <Contact />
       </section>
       <section>Footer</section>

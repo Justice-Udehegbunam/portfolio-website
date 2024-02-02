@@ -54,6 +54,28 @@
         flex-direction: column;
         gap: 30px;
 
+        .stackDiv {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 20px;
+
+          h2 {
+            font-size: 28px;
+          }
+
+          .stack {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 16px;
+
+            img {
+              width: 60px;
+            }
+          }
+        }
+
         h2 {
           font-size: 72px;
         }
@@ -65,6 +87,8 @@
 
         .buttonContainer {
           position: relative;
+          display: flex;
+          gap: 20px;
 
           button {
             background-color: orange;
