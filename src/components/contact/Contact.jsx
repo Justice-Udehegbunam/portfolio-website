@@ -37,10 +37,12 @@ export const Contact = () => {
       .then(
         (result) => {
           setSuccess(true);
+          setTimeout(() => setSuccess(false), 3000);
           console.log(result.text);
         },
         (error) => {
           setError(true);
+          setTimeout(() => setError(false), 3000);
           console.log(error.text);
         }
       );
@@ -137,8 +139,10 @@ export const Contact = () => {
           ></textarea>
 
           <button>Submit</button>
-          {error && "Error"}
-          {success && "Sent successfully!"}
+          <p>
+            {error && "Error"}
+            {success && "Sent successfully!"}
+          </p>
         </motion.form>
       </div>
     </motion.div>
