@@ -50,7 +50,8 @@ export const Services = () => {
         <div className="title">
           <img src="/people.webp" alt="people" />
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>Unique</motion.b> Ideas
+            <motion.b whileHover={{ color: "orange" }}>Unique </motion.b>
+            Ideas
           </h1>
         </div>
         <div className="title">
@@ -78,7 +79,7 @@ export const Services = () => {
             throughout your project. It's all about creating modular, flexible
             pieces that make development a breeze.
           </p>
-          <button>Go</button>
+          <a href="/services">Go</a>
         </motion.div>
 
         <motion.div
@@ -91,7 +92,7 @@ export const Services = () => {
             Context API, I ensure that communication between components is
             smooth and your app's state is in good hands.
           </p>
-          <button>Go</button>
+          <a href="/services">Go</a>
         </motion.div>
 
         <motion.div
@@ -105,7 +106,7 @@ export const Services = () => {
             get a seamless experience, whether they're on a desktop or a
             smartphone.
           </p>
-          <button>Go</button>
+          <a href="/services">Go</a>
         </motion.div>
 
         <motion.div
@@ -118,7 +119,7 @@ export const Services = () => {
             data fetching, I focus on optimizing performance, ensuring your
             users enjoy a smooth and responsive experience.
           </p>
-          <button>Go</button>
+          <a href="/services">Go</a>
         </motion.div>
       </motion.div>
     </motion.div>

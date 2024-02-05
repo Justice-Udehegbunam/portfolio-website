@@ -21,22 +21,22 @@ a {
 }
 
 section {
-  height: 100vh;
   scroll-snap-align: center;
 }
 
 @mixin mobile {
-  @media (max-width: 738px) {
+  @media (max-width: 599px) {
     @content;
   }
 }
 @mixin tablet {
-  @media (max-width: 1024px) {
+  @media (min-width: 600px) and (max-width: 1400px) {
     @content;
   }
 }
+
 @mixin desktop {
-  @media (max-width: 1366px) {
+  @media (min-width: 1028px) {
     @content;
   }
 }

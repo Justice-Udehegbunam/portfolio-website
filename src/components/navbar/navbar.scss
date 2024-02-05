@@ -3,7 +3,7 @@
   height: 100px;
 
   .wrapper {
-    max-width: 1366px;
+    max-width: 90vw;
     margin: auto;
     display: flex;
     align-items: center;
@@ -18,10 +18,13 @@
     .logo {
       font-weight: bold;
       font-size: 28px;
-      margin-left: 40px;
+      margin-left: 6rem;
 
       @include mobile {
         display: none;
+      }
+      @include tablet {
+        margin-left: 90px;
       }
     }
 
@@ -31,6 +34,10 @@
 
       @include mobile {
         gap: 10px;
+      }
+
+      @include tablet {
+        margin: 0 0 0 2rem;
       }
 
       img {
