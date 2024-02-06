@@ -26,7 +26,7 @@ const About = () => {
     // Set a timer to update the state after 2 seconds
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 600);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -149,7 +149,10 @@ const About = () => {
               confidence, and it has significantly enhanced my skills as a
               frontend developer.
             </p>
-            <a href="" target="blank">
+            <a
+              href="https://drive.google.com/file/d/1wX59raysPufaHm-2JtMexqou86MogYIH/view?usp=drive_link"
+              target="blank"
+            >
               Click to View
             </a>
           </div>
@@ -179,7 +182,10 @@ const About = () => {
               understanding of web technologies and preparing me for more
               advanced coursework.
             </p>
-            <a href="" target="blank">
+            <a
+              href="https://drive.google.com/file/d/1xBzoOF6HrXl8gUjBiBA7B8fs-n8KfphK/view?usp=sharing"
+              target="blank"
+            >
               Click to View
             </a>
           </div>
@@ -195,21 +201,41 @@ const About = () => {
               certification has been invaluable in ensuring that the websites I
               build provide a great user experience across different platforms.
             </p>
-            <a href="" target="blank">
+            <a
+              href="https://drive.google.com/file/d/1bKBjdPtU_fvNbp9CSTgHEYoAq_7SXkqm/view?usp=sharing"
+              target="blank"
+            >
               Click to View
             </a>
           </div>
         </div>
 
-        <h2 className="section-title">Experience</h2>
-        <div className="experience-item">
-          <h3>Frontend Developer</h3>
-          <p>[Company Name], [Location] | [Start Date] - [End Date]</p>
-          <p>
-            Worked on the development of [project details]. Collaborated with a
-            cross-functional team to ensure high-quality and timely delivery of
-            projects.
-          </p>
+        <div className="experience-section">
+          <h2 className="title">Experience</h2>
+          <div className="experience">
+            <img src={seamfix} alt="Seamfix Logo" />
+            <div className="body">
+              <div className="company">
+                <div className="details">
+                  <h3>Frontend Web Developer Intern</h3>
+                  <p>Seamfix</p>
+                  <p>December 2023 - January 2024</p>
+                </div>
+              </div>
+              <div className="description">
+                <p>
+                  As a frontend web developer intern at Seamfix, I collaborated
+                  with the development team to create responsive and
+                  user-friendly web applications. My responsibilities included
+                  implementing user interfaces, optimizing website performance,
+                  and debugging issues. I gained valuable experience working
+                  with technologies such as React, HTML, CSS, and JavaScript,
+                  and contributed to various projects that enhanced my skills in
+                  frontend development.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

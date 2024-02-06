@@ -32,11 +32,11 @@ const App = () => {
       <section id="portfolio">
         <Parallax type="portfolio" />
       </section>
-      {/*}     <Portfolio />
-    <section id="Contact">
+      <Portfolio />
+      {/*  <section id="Contact">
         <Contact />
-      </section>
-      <section>Footer</section> */}
+      </section> */}
+      <section>Footer</section>
       {/*  <Test /> */}
     </>
   );
