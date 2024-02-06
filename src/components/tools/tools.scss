@@ -23,6 +23,7 @@
       padding: 10px;
       background-color: #f0f0f0;
       border-radius: 8px;
+      cursor: pointer;
 
       svg {
         font-size: 36px;
@@ -34,5 +35,28 @@
         font-weight: bold;
       }
     }
+
+    // Add color styles for each tool
+    .react-icon {
+      color: #61dafb;
+    } // React blue
+    .scss-icon {
+      color: #c6538c;
+    } // SCSS purple
+    .html-icon {
+      color: #e44d26;
+    } // HTML red
+    .css-icon {
+      color: #1572b6;
+    } // CSS blue
+    .js-icon {
+      color: #f0db4f;
+    } // JavaScript yellow
+    .nodejs-icon {
+      color: #6cc24a;
+    } // Node.js green
+    .tailwind-icon {
+      color: #38b2ac;
+    } // Tailwind CSS teal
   }
 }

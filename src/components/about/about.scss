@@ -1,0 +1,251 @@
+.about-container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-content {
+  .about-hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15.8rem auto;
+    gap: 3rem;
+
+    p {
+      font-size: 24px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+
+    .skills-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      max-width: 400px;
+
+      margin: 3rem 0;
+
+      /* .skill-icon {
+          font-size: 48px;
+          margin-bottom: 10px;
+        }
+ */
+      .skills {
+        .skill1 {
+          width: 300px;
+          display: flex;
+          justify-content: center;
+
+          .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .react-icon {
+              color: #61dafb;
+            }
+            .skill-icon {
+              font-size: 48px;
+              margin-bottom: 10px;
+            }
+
+            span {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .skill2-3 {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 280px;
+          .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .tailwind-icon {
+              color: #38b2ac;
+            }
+
+            span {
+              font-size: 18px;
+            }
+          }
+          .css-icon {
+            color: #1572b6;
+          } // CSS blue
+
+          .skill-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+          }
+        }
+
+        .skill4-5 {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 330px;
+
+          .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .scss-icon {
+              color: #c6538c;
+            } // SCSS purple
+
+            span {
+              font-size: 18px;
+            }
+          }
+
+          .html-icon {
+            color: #e44d26;
+          } // HTML red
+
+          .skill-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+          }
+        }
+
+        .skill6-7 {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          width: 300px;
+
+          .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .nodejs-icon {
+              margin-left: 50px;
+              color: #6cc24a;
+            } // Node.js green
+
+            span {
+              font-size: 18px;
+            }
+          }
+          .js-icon {
+            color: #f0db4f;
+          } // JavaScript yellow
+
+          .skill-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+          }
+        }
+
+        .skiil8 {
+          width: 300px;
+          padding-left: 140px;
+
+          .item {
+            margin: 0 auto;
+
+            .span {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      i {
+        font-size: 24px;
+        font-weight: 600;
+        color: white;
+        text-align: center;
+      }
+    }
+  }
+
+  .title {
+    width: 100%;
+    margin: 2rem auto 2rem;
+    font-size: 3.5rem;
+  }
+
+  .education {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+    div {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      img {
+        width: 100%;
+        height: 200px;
+        z-index: -1;
+
+        &:hover {
+          border-top-left-radius: 14px;
+          border-top-right-radius: 14px;
+        }
+      }
+
+      h3 {
+        font-size: 1.75rem;
+      }
+      p {
+        font-size: 18px;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 24px;
+      }
+
+      a {
+        font-size: 18px;
+        text-align: center;
+        background-color: orange;
+        color: black;
+        padding: 14px 20px;
+        border-radius: 14px;
+        border: 1px solid transparent;
+
+        &:hover {
+          border: 1px solid orange;
+          background-color: transparent;
+          color: orange;
+          transition: 1s ease;
+        }
+      }
+    }
+  }
+
+  .experience-item {
+    margin-bottom: 30px;
+
+    h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
+}

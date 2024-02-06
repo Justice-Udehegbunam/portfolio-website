@@ -25,15 +25,15 @@ export const Parallax = ({ type }) => {
       <motion.h1 style={{ y: yText }}>
         {type === "services"
           ? "What I Offer!"
-          : type === "tools"
-          ? "My Tech Stack!"
+          : type === "about"
+          ? "About Me"
           : "What I've Done!"}
       </motion.h1>
       <motion.div className="mountains"></motion.div>
       <motion.div
         style={{
           y: yBg,
-          backgroundImage: `url(${type === "services" && "/planets.png"})`,
+          backgroundImage: `url(${type === "about" && "/planets.png"})`,
           marginBottom: type === "portfolio" && "36rem",
         }}
         className="plannets"
