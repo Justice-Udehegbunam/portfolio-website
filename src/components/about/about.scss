@@ -1,7 +1,14 @@
+@import "../../app.scss";
+
 .about-container {
   max-width: 90%;
   margin: 0 auto;
   padding: 20px;
+
+  @include mobile {
+    max-width: 100%;
+    margin-top: 2rem;
+  }
 }
 
 .about-content {
@@ -10,14 +17,41 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 13.8rem 2rem;
+    height: 100vh;
+    margin: auto 2rem;
     gap: 2rem;
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      height: 100vh;
+    }
+    @include tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      height: 100vh;
+    }
 
     p {
       font-size: 24px;
       line-height: 1.6;
       margin-bottom: 20px;
       max-width: 600px;
+
+      @include mobile {
+        max-width: 100%;
+        font-size: 1.125rem;
+        margin: 12px 0;
+      }
+      @include tablet {
+        max-width: 100%;
+        font-size: 2rem;
+        margin-top: 1rem;
+      }
     }
 
     .skills-container {
@@ -27,6 +61,14 @@
       flex-direction: column;
       flex-wrap: nowrap;
       max-width: 400px;
+
+      @include mobile {
+        display: none;
+      }
+
+      @include tablet {
+        max-width: 500px;
+      }
 
       margin: 3rem 0;
 
@@ -62,6 +104,7 @@
           align-items: center;
           justify-content: space-between;
           width: 280px;
+
           .item {
             display: flex;
             flex-direction: column;
@@ -169,18 +212,102 @@
         text-align: center;
       }
     }
+
+    .skills-container-mobile {
+      width: 100%;
+      margin: 0 2rem;
+      @include desktop {
+        display: none;
+      }
+      @include tablet {
+        display: none;
+      }
+
+      .skills {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .skill {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          .react-icon {
+            color: #61dafb;
+          }
+
+          .tailwind-icon {
+            color: #38b2ac;
+          }
+
+          .css-icon {
+            color: #1572b6;
+          }
+
+          .scss-icon {
+            color: #c6538c;
+          }
+
+          .html-icon {
+            color: #e44d26;
+          }
+
+          .nodejs-icon {
+            color: #6cc24a;
+          }
+
+          .js-icon {
+            color: #f0db4f;
+          }
+
+          .skill-icon {
+            font-size: 30px;
+            margin-bottom: 8px;
+          }
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+
+      i {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-style: normal;
+      }
+    }
   }
 
   .title {
     width: 100%;
     margin: 2rem auto 2rem;
     font-size: 3.5rem;
+
+    @include mobile {
+      margin-top: 8rem;
+      font-size: 2rem;
+    }
+    @include tablet {
+      font-size: 2.5rem;
+    }
   }
 
   .education {
     display: flex;
     flex-wrap: wrap;
     gap: 2rem;
+    margin-bottom: 4rem;
+
+    @include mobile {
+      align-items: center;
+      justify-content: center;
+    }
 
     div {
       width: 400px;
@@ -191,6 +318,15 @@
       border-radius: 14px;
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      @include mobile {
+        width: 350px;
+        border-radius: 10px;
+      }
+      @include tablet {
+        width: 300px;
+        border-radius: 10px;
+      }
 
       &:hover {
         transform: scale(1.05);
@@ -203,6 +339,13 @@
         object-fit: cover;
         border-top-left-radius: 14px;
         border-top-right-radius: 14px;
+
+        @include mobile {
+          height: 160px;
+        }
+        @include tablet {
+          height: 170px;
+        }
       }
 
       h3 {
@@ -210,6 +353,13 @@
         color: white;
         padding: 10px;
         margin: 0;
+
+        @include mobile {
+          font-size: 1.25rem;
+        }
+        @include tablet {
+          font-size: 1.5rem;
+        }
       }
 
       p {
@@ -217,6 +367,13 @@
         color: rgba(255, 255, 255, 0.6);
         padding: 0 10px;
         margin: 0;
+
+        @include mobile {
+          font-size: 0.85rem;
+        }
+        @include tablet {
+          font-size: 1rem;
+        }
       }
 
       a {
@@ -228,6 +385,11 @@
         border-radius: 14px;
         border: 1px solid transparent;
         transition: background-color 0.3s ease, color 0.3s ease;
+
+        @include mobile {
+          font-size: 0.85rem;
+          padding: 10px 20px;
+        }
 
         &:hover {
           background-color: transparent;
@@ -247,9 +409,18 @@
       gap: 20px;
       margin-bottom: 20px;
 
+      @include mobile {
+        flex-direction: column;
+      }
+
       img {
         width: 600px; /* Adjust size as needed */
         height: auto;
+
+        @include mobile {
+          width: 100%;
+          height: 200px;
+        }
       }
 
       .body {
@@ -263,6 +434,10 @@
               font-size: 1.75rem;
               color: white;
               margin: 10px 10px;
+
+              @include mobile {
+                font-size: 1.25rem;
+              }
             }
 
             p {
@@ -270,6 +445,10 @@
               color: rgba(255, 255, 255, 0.6);
               padding: 0 10px;
               margin: 0;
+
+              @include mobile {
+                font-size: 0.85rem;
+              }
             }
           }
         }
@@ -280,6 +459,10 @@
             color: white;
             padding: 0 10px;
             margin: 10px 0;
+
+            @include mobile {
+              font-size: 0.85rem;
+            }
           }
         }
       }

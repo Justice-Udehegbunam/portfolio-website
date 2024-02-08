@@ -133,6 +133,98 @@ const About = () => {
             </motion.div>
             <i>And Still Learning!!</i>
           </div>
+
+          <div className="skills-container-mobile">
+            <div className="skills">
+              <motion.div
+                className="skill"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ repeat: Infinity, duration: 2, delay: 0 }}
+              >
+                <FaReact className="skill-icon react-icon" />
+                <span>React</span>
+              </motion.div>
+
+              <motion.div
+                className="skill"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ repeat: Infinity, duration: 2, delay: 0.1 }}
+              >
+                <SiTailwindcss className="skill-icon tailwind-icon" />
+                <span>Tailwind</span>
+              </motion.div>
+
+              <motion.div
+                className="skill"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ repeat: Infinity, duration: 2, delay: 0.2 }}
+              >
+                <FaCss3 className="skill-icon css-icon" />
+                <span>CSS</span>
+              </motion.div>
+
+              <motion.div
+                className="skill"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ repeat: Infinity, duration: 2, delay: 0.3 }}
+              >
+                <FaSass className="skill-icon scss-icon" />
+                <span>SASS</span>
+              </motion.div>
+
+              <motion.div
+                className="skill"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ repeat: Infinity, duration: 2, delay: 0.4 }}
+              >
+                <FaHtml5 className="skill-icon html-icon" />
+                <span>HTML</span>
+              </motion.div>
+
+              <motion.div
+                className="skill"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ repeat: Infinity, duration: 2, delay: 0.5 }}
+              >
+                <FaJs className="skill-icon js-icon" />
+                <span>JS</span>
+              </motion.div>
+
+              <motion.div
+                className="skill"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ repeat: Infinity, duration: 2, delay: 0.6 }}
+              >
+                <FaNodeJs className="skill-icon nodejs-icon" />
+                <span>NodeJS</span>
+              </motion.div>
+
+              <motion.div
+                className="skill"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ repeat: Infinity, duration: 2, delay: 0.7 }}
+              >
+                <svg
+                  height="34"
+                  viewBox="3.7 3.7 43.6 43.6"
+                  width="32"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="m47.3 3.7v21.8l-10.9 10.9-10.9 10.9-10.9-10.9 10.9-10.9v.1-.1z"
+                    fill="#59529d"
+                  />
+                  <path d="m47.3 25.5v21.8l-10.9-10.9z" fill="#5271b4" />
+                  <path
+                    d="m25.5 25.5-10.9 10.9-10.9 10.9v-43.6l10.9 10.9z"
+                    fill="#bb4b96"
+                  />
+                </svg>
+                <span>F-Motion</span>
+              </motion.div>
+            </div>
+            <i>And Still Learning!!</i>
+          </div>
         </div>
 
         <h2 className="title">Certifications</h2>

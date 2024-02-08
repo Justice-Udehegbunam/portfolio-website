@@ -22,13 +22,18 @@ export const Parallax = ({ type }) => {
             : "linear-gradient(180deg, #111132, #505064 )",
       }}
     >
-      <motion.h1 style={{ y: yText }}>
-        {type === "services"
-          ? "What I Offer!"
-          : type === "about"
-          ? "About Me"
-          : "What I've Done!"}
-      </motion.h1>
+      <motion.h1
+        style={{ y: yText }}
+        dangerouslySetInnerHTML={{
+          __html:
+            type === "services"
+              ? "What I Offer!"
+              : type === "about"
+              ? "About Me"
+              : `What I've <br /> Done!`,
+        }}
+      />
+
       <motion.div className="mountains"></motion.div>
       <motion.div
         style={{
