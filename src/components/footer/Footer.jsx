@@ -7,7 +7,7 @@ const Footer = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentYear(new Date().getFullYear());
-    }, 1000 * 60); // Update every minute to ensure timely year changes
+    }, 1000 * 60);
     return () => clearInterval(intervalId);
   }, []);
 
