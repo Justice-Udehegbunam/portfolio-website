@@ -50,13 +50,13 @@ export const Services = () => {
         <div className="title">
           <img src="/people.webp" alt="people" />
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>Unique </motion.b>
+            <b>Unique </b>
             Ideas
           </h1>
         </div>
         <div className="title">
           <h1>
-            <motion.b whileHover={{ color: "orange" }}>For Your </motion.b>
+            <b>For Your </b>
             Business.
           </h1>
           <button>WHAT WE DO?</button>
