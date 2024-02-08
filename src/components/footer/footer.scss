@@ -1,2 +1,54 @@
+@import "../../app.scss";
+
 .footer {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+
+  .container {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    @include mobile {
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .footer-content {
+      p {
+        font-size: 18px;
+        font-family: inherit;
+
+        @include mobile {
+          font-size: 14px;
+        }
+      }
+    }
+
+    a {
+      font-size: 18px;
+
+      @include mobile {
+        font-size: 14px;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 10px 0;
+
+    .container {
+      padding: 0 20px;
+    }
+  }
 }
