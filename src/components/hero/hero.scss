@@ -1,46 +1,82 @@
 @import "../../app.scss";
-
 .hero {
   height: calc(100vh - 100px);
+
   overflow: hidden;
-  background: linear-gradient(180deg, #111132, #0c0c1d, #111132);
+  background: linear-gradient(180deg, #0c0c1d, #111132);
   position: relative;
 
   .wrapper {
-    max-width: 1366px;
+    max-width: 90vw;
     height: 100%;
-    width: 80%;
     margin: auto;
 
     .textContainer {
+      width: 50%;
       height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       gap: 40px;
+      margin-left: 20px;
+
+      /* @include ipad-pro {
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        gap: 30px;
+      } */
+      @include tablet {
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        gap: 30px;
+      }
 
       @include mobile {
         height: 50%;
         width: 100%;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
       }
 
       h2 {
-        font-size: 30px;
+        font-size: 2.5rem;
         color: rebeccapurple;
         letter-spacing: 10px;
+
+        @include mobile {
+          font-size: 16px;
+          margin: 0 6px;
+        }
       }
 
       h1 {
-        font-size: 88px;
+        font-size: 4rem;
 
         @include mobile {
-          font-size: 36px;
+          margin: 0 10px;
+          font-size: 28px;
+        }
+        @include tablet {
+          margin: 0 10px;
+          font-size: 48px;
+          text-align: center;
         }
       }
 
       .buttons {
-        display: flex;
-        gap: 2rem;
+        z-index: 10;
+        @include mobile {
+          display: flex;
+          flex-direction: row;
+          margin-bottom: 8px;
+          padding: 10px;
+        }
 
         button {
           padding: 20px;
@@ -51,6 +87,10 @@
           font-size: 18px;
           font-weight: normal;
           z-index: 10;
+
+          @include mobile {
+            padding: 16px;
+          }
         }
         button:hover {
           cursor: pointer;
@@ -59,10 +99,25 @@
           color: black;
           transition: background 0.5s ease, color 0.5s ease;
         }
+
+        button:last-child {
+          margin: 0 2rem;
+
+          @include mobile {
+            margin: 0 0 0 20px;
+          }
+        }
       }
 
       img {
         width: 50px;
+
+        @include mobile {
+          width: 30px;
+        }
+        @include tablet {
+          width: 40px;
+        }
       }
     }
   }
@@ -73,10 +128,26 @@
     top: 0;
     right: 0;
 
+    @include mobile {
+      height: 66%;
+      width: 100%;
+      top: unset;
+      bottom: 0;
+    }
+    @include tablet {
+      display: none;
+    }
+    /* @include ipad-pro {
+      height: 80%;
+      width: 80%;
+      top: unset;
+      bottom: 0;
+    }
+ */
     img {
-      width: 880px;
-      object-fit: contain;
+      width: 100%;
       height: 100%;
+      object-fit: cover;
     }
 
     &::after {
@@ -94,10 +165,13 @@
   .slidingContainer {
     position: absolute;
     font-size: 50vh;
-    bottom: -120px;
+    bottom: -80px;
     white-space: nowrap;
     color: #ffffff09;
     font-weight: bold;
-    z-index: 0;
+
+    @include mobile {
+      display: none;
+    }
   }
 }

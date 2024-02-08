@@ -1,6 +1,7 @@
+@import "../../app.scss";
+
 .services {
   background: linear-gradient(180deg, #111132, #0c0c1d, #111132);
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -10,20 +11,44 @@
     flex: 1;
     align-self: flex-end;
     display: flex;
+    margin: 4rem 0;
+
+    @include mobile {
+      margin: 3em 0 0rem;
+    }
+
     align-items: center;
-    gap: 20px;
+    gap: 1.2rem;
+
+    @include mobile {
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+    }
 
     p {
       font-weight: 200;
-      font-size: 20px;
+      font-size: 1.7rem;
       color: gray;
       text-align: right;
-    }
 
+      @include mobile {
+        font-size: 0.75rem;
+        text-align: center;
+      }
+    }
     hr {
       width: 26rem;
       border: none;
       border-top: 0.5px solid grey;
+
+      @include mobile {
+        width: 100%;
+      }
+
+      @include tablet {
+        width: 6rem;
+      }
     }
   }
 
@@ -32,6 +57,16 @@
     flex-direction: column;
     align-items: center;
     flex: 2;
+    margin: 0 0 4rem 0;
+
+    @include mobile {
+      margin: unset;
+      width: 100%;
+    }
+    @include tablet {
+      width: 80%;
+      margin: 0 auto;
+    }
 
     .title {
       display: flex;
@@ -39,16 +74,40 @@
       align-items: center;
       gap: 50px;
 
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+      @include tablet {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
       img {
         width: 300px;
         height: 120px;
         border-radius: 50px;
         object-fit: cover;
+
+        @include mobile {
+          margin-top: 2rem;
+          width: 150px;
+          height: 50px;
+        }
       }
 
       h1 {
         font-size: 96px;
         font-weight: 100;
+
+        @include mobile {
+          font-size: 2.05rem;
+        }
+        @include tablet {
+          font-size: 80px;
+        }
       }
 
       button {
@@ -59,6 +118,13 @@
         border: none;
         font-size: 24px;
         cursor: pointer;
+
+        @include mobile {
+          font-size: 14px;
+          width: 120px;
+          height: 50px;
+          margin-bottom: 2rem;
+        }
 
         &:hover {
           border: 1px solid orange;
@@ -73,24 +139,76 @@
   .listContainer {
     flex: 2;
     display: flex;
-    max-width: 1366px;
-    margin: auto;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 4rem auto 6rem;
+    padding: auto;
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+      margin: 0 auto 1rem;
+    }
 
     .box {
       padding: 50px;
       border: 0.5px solid gray;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       flex-direction: column;
+      margin: auto;
 
-      button {
+      h2 {
+        @include mobile {
+          font-size: 1rem;
+        }
+      }
+
+      p {
+        padding: 2rem 0;
+
+        font-size: 1.5rem;
+        text-align: center;
+
+        @include mobile {
+          text-align: left;
+          font-size: 0.9rem;
+        }
+      }
+
+      @include mobile {
+        border: none;
+        align-items: center;
+        gap: 20px;
+        padding: 40px;
+        text-align: center;
+      }
+
+      a {
         padding: 10px;
         background-color: orange;
         border: none;
         cursor: pointer;
         width: 100%;
+        text-align: center;
         font-size: 18px;
+        color: white;
+        max-width: 400px;
+        border-radius: 4px;
+        z-index: 10;
+
+        &:hover {
+          border: 1px solid orange;
+          color: black;
+          background-color: transparent;
+          transition: all 300ms ease-in-out;
+        }
+
+        @include mobile {
+          display: none;
+        }
       }
     }
   }

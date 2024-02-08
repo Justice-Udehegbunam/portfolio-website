@@ -22,20 +22,23 @@ export const Parallax = ({ type }) => {
             : "linear-gradient(180deg, #111132, #505064 )",
       }}
     >
-      <motion.h1 style={{ y: yText }}>
-        {type === "services"
-          ? "What I Offer!"
-          : type === "tools"
-          ? "My Tech Stack!"
-          : "What I've Done!"}
-      </motion.h1>
+      <motion.h1
+        style={{ y: yText }}
+        dangerouslySetInnerHTML={{
+          __html:
+            type === "services"
+              ? "What I Offer!"
+              : type === "about"
+              ? "About Me"
+              : `What I've <br /> Done!`,
+        }}
+      />
+
       <motion.div className="mountains"></motion.div>
       <motion.div
         style={{
           y: yBg,
-          backgroundImage: `url(${
-            type === "services" || "tools" ? "/planets.png" : "/sun.png"
-          })`,
+          backgroundImage: `url(${type === "about" && "/planets.png"})`,
           marginBottom: type === "portfolio" && "36rem",
         }}
         className="plannets"

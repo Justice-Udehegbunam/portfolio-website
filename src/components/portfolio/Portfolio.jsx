@@ -13,7 +13,7 @@ const items = [
     id: 1,
     title: "Liquor Haven Website",
     img: liquor,
-    desc: "Liquor Haven Website is a feature-rich and fully functional E-Commerce platform dedicated to the world of beverages. This responsive website provides a seamless shopping experience for users interested in exploring and purchasing a wide variety of drinks. With an intuitive user interface and cutting-edge design, Liquor Haven is tailored to meet the needs of both casual consumers and connoisseurs alike, making it the go-to destination for all things related to drinks and spirits.",
+    desc: `Liquor Haven Website is a feature-rich and fully functional E-Commerce platform dedicated to the world of beverages. This responsive website provides a seamless shopping experience for users interested in exploring and purchasing a wide variety of drinks. With an intuitive user interface and cutting-edge design, <b>Liquor Haven is tailored to meet the needs of both casual consumers and connoisseurs alike, making it the go-to destination for all things related to drinks and spirits.</b>`,
     link: "https://liquor-haven.vercel.app",
     github: "https://github.com/AfoDyDigitals/LiquorHaven/tree/justice",
     lang: "react",
@@ -24,7 +24,7 @@ const items = [
     id: 2,
     title: "Nike Website",
     img: nike,
-    desc: "The Nike Website replica is a meticulously crafted and fully responsive reproduction of the renowned NIKE E-Commerce platform. This project not only emulates the visual aesthetics of the original site but also incorporates a high level of interactivity and user engagement. From seamless navigation to a visually appealing product display, the Nike Website replica aims to showcase the prowess of modern web development while honoring the iconic design and functionality of the NIKE brand.",
+    desc: `The Nike Website replica is a meticulously crafted and fully responsive reproduction of the renowned NIKE E-Commerce platform. This project not only emulates the visual aesthetics of the original site but also incorporates a high level of interactivity and user engagement. <b>From seamless navigation to a visually appealing product display, the Nike Website replica aims to showcase the prowess of modern web development while honoring the iconic design and functionality of the NIKE brand.</b>`,
     link: "https://nike-app-tailwind-jl6ffqcxr-justices-projects-51d4f6d2.vercel.app/",
     github: "https://github.com/Justice-Udehegbunam/nike-app-tailwind-css",
     lang: "react",
@@ -34,7 +34,7 @@ const items = [
     id: 3,
     title: "GPT-3 Website",
     img: gpt,
-    desc: "The GPT-3 Website project is a responsive and dynamic web application inspired by the official GPT-3 website. This endeavor not only mirrors the sleek design of the original but also incorporates additional features and enhancements. The website serves as a demonstration of GPT-3 capabilities and showcases the potential of language models in various applications. With a user-friendly interface and informative content, the GPT-3 Website project aims to provide an immersive experience for users interested in exploring the capabilities of advanced natural language processing technologies.",
+    desc: `The GPT-3 Website project is a responsive and dynamic web application inspired by the official GPT-3 website. This endeavor not only mirrors the sleek design of the original but also incorporates additional features and enhancements. The website serves as a demonstration of GPT-3 capabilities and showcases the potential of language models in various applications. <b> With a user-friendly interface and informative content, the GPT-3 Website project aims to provide an immersive experience for users interested in exploring the capabilities of advanced natural language processing technologies.</b>`,
     link: "https://gpt-3-web-topaz.vercel.app",
     github: "https://github.com/Justice-Udehegbunam/gpt-3_website",
     lang: "react",
@@ -44,7 +44,7 @@ const items = [
     id: 4,
     title: "EduUnity Educational Website",
     img: edu,
-    desc: "EduUnity Educational Website is a comprehensive and fully responsive platform designed to revolutionize online education. This project goes beyond the conventional educational website by integrating APIs and seamlessly incorporating YouTube content. EduUnity aims to create an engaging and interactive learning experience, offering users a diverse range of educational resources. With a user-friendly interface, robust functionality, and a commitment to excellence in education, EduUnity is poised to become a leading force in the evolution of online learning platforms.",
+    desc: `EduUnity Educational Website is a comprehensive and fully responsive platform designed to revolutionize online education. This project goes beyond the conventional educational website by integrating APIs and seamlessly incorporating YouTube content. <b> EduUnity aims to create an engaging and interactive learning experience, offering users a diverse range of educational resources. With a user-friendly interface, robust functionality, and a commitment to excellence in education, EduUnity is poised to become a leading force in the evolution of online learning platforms. </b>`,
     link: "https://edu-unity.vercel.app/",
     github: "https://github.com/Justice-Udehegbunam/EduUnity",
     lang: "js",
@@ -70,7 +70,7 @@ const Single = ({ item }) => {
           </div>{" "}
           <motion.div className="textContainer" style={{ y: y }}>
             <h2>{item.title}</h2>
-            <p>{item.desc}</p>
+            <p dangerouslySetInnerHTML={{ __html: item.desc }} />
 
             <div className="stackDiv">
               <h2>Technologies Used:</h2>
@@ -132,14 +132,15 @@ const Single = ({ item }) => {
               <button onClick={() => window.open(item.link, "_blank")}>
                 See Demo
               </button>
+              <span className="tooltip">{item.link}</span>
+
               <button
                 onClick={() => window.open(item.github, "_blank")}
                 className="last"
               >
-                View Source Code
+                View <b>Source</b> Code
               </button>
-              {/*               <span className="tooltip">{item.link}</span>
-               */}
+              <span className="tooltip">{item.github}</span>
             </div>
           </motion.div>
         </div>
