@@ -29,7 +29,7 @@
       height: 100vh;
     }
     @include tablet {
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
       gap: 3rem;
@@ -49,7 +49,7 @@
       }
       @include tablet {
         max-width: 100%;
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-top: 1rem;
       }
     }
@@ -295,6 +295,7 @@
     }
     @include tablet {
       font-size: 2.5rem;
+      margin-left: 2rem;
     }
   }
 
@@ -358,7 +359,7 @@
           font-size: 1.25rem;
         }
         @include tablet {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
         }
       }
 
@@ -372,7 +373,7 @@
           font-size: 0.85rem;
         }
         @include tablet {
-          font-size: 1rem;
+          font-size: 0.85rem;
         }
       }
 
@@ -387,6 +388,10 @@
         transition: background-color 0.3s ease, color 0.3s ease;
 
         @include mobile {
+          font-size: 0.85rem;
+          padding: 10px 20px;
+        }
+        @include tablet {
           font-size: 0.85rem;
           padding: 10px 20px;
         }

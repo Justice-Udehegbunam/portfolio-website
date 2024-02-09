@@ -53,8 +53,16 @@ const Hero = () => {
             React Frontend Web developer
           </motion.h1>
           <motion.div className="buttons" variants={textVariants}>
-            <button variants={textVariants}>See My Works</button>
-            <button variants={textVariants}>Contact Me</button>
+            <a
+              variants={textVariants}
+              href="
+            #Portfolio"
+            >
+              See My Works
+            </a>
+            <a variants={textVariants} href="#Contact">
+              Contact Me
+            </a>
           </motion.div>
           <motion.img
             variants={textVariants}

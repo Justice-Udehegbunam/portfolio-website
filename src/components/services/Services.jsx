@@ -59,7 +59,7 @@ export const Services = () => {
             <b>For Your </b>
             Business.
           </h1>
-          <button>WHAT WE DO?</button>
+          <a href="#what-i-do">WHAT I DO?</a>
         </div>
       </motion.div>
       <motion.div
@@ -68,6 +68,7 @@ export const Services = () => {
         initial="initial"
         ref={ref}
         animate={isInView && "animate"}
+        id="what-i-do"
       >
         <motion.div
           className="box"
