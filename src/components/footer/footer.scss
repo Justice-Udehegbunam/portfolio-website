@@ -1,18 +1,23 @@
 @import "../../app.scss";
 
 .footer {
+  position: relative;
   background: linear-gradient(180deg, #0c0c1d, #111132);
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
 
   .container {
     max-width: 1200px;
+
+    color: #fff;
+    padding: 20px;
+    text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
+    position: sticky;
+    bottom: 0;
+    left: 0;
 
     @include mobile {
       flex-direction: column;

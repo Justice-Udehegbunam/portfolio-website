@@ -73,7 +73,7 @@ const Single = ({ item }) => {
             <p dangerouslySetInnerHTML={{ __html: item.desc }} />
 
             <div className="stackDiv">
-              <h2>Technologies Used:</h2>
+              <h3>Technologies Used:</h3>
               <div className="stack">
                 {item.lang === "react" && (
                   <motion.div whileHover={{ scale: 1.2 }}>
