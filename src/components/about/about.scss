@@ -419,7 +419,7 @@
       }
 
       img {
-        width: 600px; /* Adjust size as needed */
+        width: 600px;
         height: auto;
 
         @include mobile {
@@ -454,6 +454,10 @@
               @include mobile {
                 font-size: 0.85rem;
               }
+
+              @include tablet {
+                font-size: 1rem;
+              }
             }
           }
         }
@@ -467,6 +471,9 @@
 
             @include mobile {
               font-size: 0.85rem;
+            }
+            @include tablet {
+              font-size: 1rem;
             }
           }
         }

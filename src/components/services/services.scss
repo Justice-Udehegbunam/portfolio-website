@@ -124,8 +124,7 @@
 
         @include mobile {
           font-size: 14px;
-          width: 120px;
-          height: 50px;
+          padding: 1.5rem 2rem;
           margin-bottom: 2rem;
         }
         @include tablet {
@@ -170,6 +169,10 @@
       align-items: center;
       flex-direction: column;
       margin: auto;
+
+      @include mobile {
+        padding: unset;
+      }
 
       h2 {
         @include mobile {

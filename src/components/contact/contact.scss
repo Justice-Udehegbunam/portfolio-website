@@ -12,8 +12,9 @@
   }
 
   @include mobile {
-    height: unset;
+    height: 90vh;
     flex-direction: column;
+    margin-bottom: 1rem;
     gap: 10px;
   }
 
@@ -27,7 +28,6 @@
       gap: 10px;
       text-align: center;
       align-items: center;
-      margin-top: 70px;
     }
 
     h1 {

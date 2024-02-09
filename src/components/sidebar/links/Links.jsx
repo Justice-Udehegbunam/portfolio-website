@@ -36,6 +36,7 @@ const Links = () => {
           variants={itemVariants}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
+          style={{ color: "black" }}
         >
           {item}
         </motion.a>
