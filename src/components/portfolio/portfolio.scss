@@ -18,6 +18,10 @@
       z-index: 100;
       background: #0c0c1d;
     }
+    @include tablet {
+      z-index: 100;
+      background: #0c0c1d;
+    }
 
     h3 {
       padding-left: 60px;
