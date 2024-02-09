@@ -85,6 +85,9 @@
         @include mobile {
           max-width: 90%;
         }
+        @include tablet {
+          max-width: 90%;
+        }
       }
     }
     form {

@@ -17,7 +17,7 @@ const App = () => {
         <Navbar />
         <Hero />
       </section>
-      <section>
+      <section id="About">
         <Parallax type="about" />
       </section>
       <section>
@@ -26,11 +26,11 @@ const App = () => {
       <section id="Services">
         <Parallax type="services" />
       </section>
-      <section id="Portfolio">
+      <section>
         <Services />
       </section>
 
-      <section id="portfolio">
+      <section id="Portfolio">
         <Parallax type="portfolio" />
       </section>
       <Portfolio />
