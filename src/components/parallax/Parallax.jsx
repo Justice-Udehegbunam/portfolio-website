@@ -23,7 +23,7 @@ export const Parallax = ({ type }) => {
       }}
     >
       <motion.h1
-        style={{ y: yText }}
+        style={{ y: yText, textAlign: "center" }}
         dangerouslySetInnerHTML={{
           __html:
             type === "services"

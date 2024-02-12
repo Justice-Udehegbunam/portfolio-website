@@ -251,7 +251,7 @@ const About = () => {
           <div>
             <img src={codecademy} alt="codecademy" />
             <h3>Advanced Javascript</h3>
-            <p>
+            <p className="align">
               The Advanced JavaScript course on Codecademy provided me with an
               in-depth understanding of JavaScript concepts such as closures,
               promises, and asynchronous programming. This certification has
