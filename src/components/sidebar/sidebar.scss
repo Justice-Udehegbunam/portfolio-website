@@ -16,6 +16,10 @@
     width: 400px;
     background: white;
 
+    @include tablet {
+      width: 260px;
+    }
+
     @include mobile {
       width: 150px;
       top: -12px;
@@ -34,6 +38,10 @@
 
       a {
         font-size: 40px;
+
+        @include tablet {
+          font-size: 2rem;
+        }
 
         @include mobile {
           font-size: 20px;

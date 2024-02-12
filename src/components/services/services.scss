@@ -162,13 +162,7 @@
     }
 
     .box {
-      padding: 50px;
-      border: 0.5px solid gray;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      margin: auto;
+      display: none;
 
       @include mobile {
         padding: unset;
