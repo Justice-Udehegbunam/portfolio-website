@@ -1,5 +1,6 @@
 import "./footer.scss";
 import { useEffect, useState } from "react";
+import { RiGithubFill } from "react-icons/ri";
 
 const Footer = () => {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -23,6 +24,15 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <p>&copy; {currentYear} Justice. All rights reserved.</p>
+        </div>
+        <div className="footer-icons">
+          <a
+            href="https://github.com/Justice-Udehegbunam/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <RiGithubFill /> View Github Profile
+          </a>
         </div>
         <a href="#" onClick={scrollToTop}>
           Back to Top

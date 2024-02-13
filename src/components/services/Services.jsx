@@ -1,105 +1,43 @@
 import { useRef } from "react";
 import "./services.scss";
-import { motion, useInView } from "framer-motion";
+import { useInView } from "framer-motion";
 
 export const Services = () => {
   const ref = useRef();
-
-  const isInView = useInView(ref, { margin: "-100px" });
-
-  const variants = {
-    initial: {
-      x: -100,
-      y: 50,
-      opacity: 0,
-    },
-
-    animate: {
-      x: 0,
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 1,
-        staggerChildren: 0.1,
-      },
-    },
-  };
+  const isInView = useInView(ref, { threshold: 0.5 });
 
   return (
-    <motion.div className="services" variants={variants}>
-      <motion.div
-        className="textContainer"
-        variants={variants}
-        initial="initial"
-        ref={ref}
-        animate={isInView && "animate"}
-      >
+    <div className="services" ref={ref} style={{ opacity: isInView ? 1 : 0 }}>
+      <div className="titleContainer">
         <p>
           Transforming ideas into user-friendly interfaces, <br /> One Line of
           Code at a Time!
         </p>
-        <hr />
-      </motion.div>
-      <motion.div
-        className="titleContainer"
-        variants={variants}
-        initial="initial"
-        ref={ref}
-        animate={isInView && "animate"}
-      >
         <div className="title">
-          <img src="/people.webp" alt="people" />
-          <h1>
-            <b>Unique </b>
-            Ideas
-          </h1>
+          <h1>Unique Ideas For Your Business.</h1>
+          <a>What I'm Offering?</a>
         </div>
-        <div className="title">
-          <h1>
-            <b>For Your </b>
-            Business.
-          </h1>
-          <a href="#what-i-do">WHAT I DO?</a>
-        </div>
-      </motion.div>
-      <motion.div
-        className="listContainer"
-        variants={variants}
-        initial="initial"
-        ref={ref}
-        animate={isInView && "animate"}
-        id="what-i-do"
-      >
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
+      </div>
+      <div className="listContainer" id="what-i-do">
+        <div className="box">
           <h2>Crafting Reusable Components</h2>
           <p>
             Build React components that you can use and reuse effortlessly
             throughout your project. It's all about creating modular, flexible
             pieces that make development a breeze.
           </p>
-          <a href="/services">Go</a>
-        </motion.div>
-
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
+          <a>Go</a>
+        </div>
+        <div className="box">
           <h2>Masters of State Management</h2>
           <p>
             Handle state in React like a pro. Whether it's using Redux or the
             Context API, I ensure that communication between components is
             smooth and your app's state is in good hands.
           </p>
-          <a href="/services">Go</a>
-        </motion.div>
-
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
+          <a>Go</a>
+        </div>
+        <div className="box">
           <h2>Designs that Fit Any Screen</h2>
           <p>
             Craft interfaces that gracefully adapt to all screen sizes. In
@@ -107,22 +45,18 @@ export const Services = () => {
             get a seamless experience, whether they're on a desktop or a
             smartphone.
           </p>
-          <a href="/services">Go</a>
-        </motion.div>
-
-        <motion.div
-          className="box"
-          whileHover={{ background: "lightgray", color: "black" }}
-        >
+          <a>Go</a>
+        </div>
+        <div className="box">
           <h2>Optimizing for Peak Performance</h2>
           <p>
             Make your React apps blazing fast. From efficient rendering to smart
             data fetching, I focus on optimizing performance, ensuring your
             users enjoy a smooth and responsive experience.
           </p>
-          <a href="/services">Go</a>
-        </motion.div>
-      </motion.div>
-    </motion.div>
+          <a>Go</a>
+        </div>
+      </div>
+    </div>
   );
 };
