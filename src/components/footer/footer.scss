@@ -1,12 +1,10 @@
 @import "../../app.scss";
-
 .footer {
   position: relative;
   background: linear-gradient(180deg, #0c0c1d, #111132);
 
   .container {
     max-width: 1200px;
-
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -21,26 +19,31 @@
 
     @include mobile {
       flex-direction: column;
-      gap: 4px;
+      gap: 8px;
     }
 
     .footer-content {
       p {
         font-size: 18px;
         font-family: inherit;
+      }
+    }
 
-        @include mobile {
-          font-size: 14px;
+    .footer-icons {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: #fff;
+        margin-left: 20px;
+        &:hover {
+          color: #aaa;
         }
       }
     }
 
     a {
-      font-size: 18px;
-
-      @include mobile {
-        font-size: 14px;
-      }
+      font-size: 16px;
       &:hover {
         text-decoration: underline;
       }
@@ -51,7 +54,6 @@
 @media screen and (max-width: 768px) {
   .footer {
     padding: 10px 0;
-
     .container {
       padding: 0 20px;
     }

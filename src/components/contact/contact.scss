@@ -1,10 +1,10 @@
 @import "../../app.scss";
 .contact {
-  height: 100vh;
   max-width: 1366px;
   margin: auto;
   display: flex;
   align-items: center;
+  height: 100vh;
   gap: 50px;
 
   @include tablet {
@@ -70,6 +70,10 @@
       width: 100%;
     }
 
+    @include tablet {
+      margin-top: 8rem;
+    }
+
     .phoneSvg {
       stroke: orange;
       position: absolute;
@@ -87,12 +91,14 @@
         }
         @include tablet {
           max-width: 90%;
+          margin-top: -2rem;
         }
       }
     }
     form {
       display: flex;
       flex-direction: column;
+
       gap: 20px;
 
       @include mobile {
