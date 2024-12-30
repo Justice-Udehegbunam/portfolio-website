@@ -49,9 +49,7 @@ const Hero = () => {
           animate="animate"
         >
           <motion.h2 variants={textVariants}>JUSTICE UDEHEGBUNAM</motion.h2>
-          <motion.h1 variants={textVariants}>
-            React Frontend Web developer
-          </motion.h1>
+          <motion.h1 variants={textVariants}>Web developer</motion.h1>
           <motion.div className="buttons" variants={textVariants}>
             <a
               variants={textVariants}
@@ -81,7 +79,7 @@ const Hero = () => {
         The Developer your Website Needs!
       </motion.div>
       <div className="imageContainer">
-        <img src="/myHero.png" alt="hero" />
+        <img src="/my-hero.png" alt="hero" />
       </div>
     </div>
   );
