@@ -1,9 +1,12 @@
 // About.jsx
-
-import seamfix from "../../assets/seamfix.png";
-import codecademy from "../../assets/codecademy.png";
-import freecodecamp from "../../assets/freecodecamp.png";
-import code4u from "../../assets/Screenshot 2024-02-06 105636.png";
+import {
+  softwareDevIBM,
+  seamfix,
+  databaseCertMeta,
+  cloudComputing,
+  code4u,
+  freecodecamp,
+} from "../../assets";
 
 import {
   FaReact,
@@ -14,21 +17,43 @@ import {
   FaNodeJs,
 } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import "./about.scss";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const componentRef = useRef(null);
 
   useEffect(() => {
-    // Set a timer to update the state after 2 seconds
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000);
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        // When the component is in view, update state to show it
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          // Stop observing once the state is set to true
+          observer.unobserve(entry.target);
+        }
+      });
+    };
 
-    return () => clearTimeout(timer);
+    // Create the intersection observer with options
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5, // This means 50% of the element must be in view
+    });
+
+    // Start observing the component's DOM node
+    if (componentRef.current) {
+      observer.observe(componentRef.current);
+    }
+
+    // Cleanup on component unmount
+    return () => {
+      if (componentRef.current) {
+        observer.unobserve(componentRef.current);
+      }
+    };
   }, []);
 
   const text =
@@ -37,7 +62,7 @@ const About = () => {
   return (
     <div className="about-container">
       <div className="about-content">
-        <div className="about-hero">
+        <div ref={componentRef} className="about-hero">
           <AnimatePresence>
             {isVisible && (
               <motion.p
@@ -230,17 +255,40 @@ const About = () => {
         <h2 className="title">Certifications</h2>
         <div className="education">
           <div>
+            <img src={softwareDevIBM} alt="Software developer Cert IBM" />
+            <h3>Software Development Essentials</h3>
+            <p>
+              The Software Development Essentials certification from IBM
+              provided me with a strong foundation in software development
+              principles and practices. This program covered key topics such as
+              programming fundamentals, software design, and development
+              workflows. Through this certification, I have honed my
+              problem-solving skills and gained valuable insights into building
+              reliable and efficient software applications. If you're
+              interested, you can <strong>view my certification</strong> using
+              the button below.
+            </p>
+            <a
+              href="https://drive.google.com/file/d/1BCSexx11cgfrrc9qlTO0_dLm4SK4y-1n/view?usp=drive_link"
+              target="blank"
+            >
+              Click to View
+            </a>
+          </div>
+          <div>
             <img src={seamfix} alt="seamfix" />
             <h3>Certified Frontend Developer</h3>
             <p>
               The Certified Frontend Developer certification from Seamfix was a
               comprehensive program covering HTML, CSS, and JavaScript. Through
               this certification, I gained a deep understanding of frontend
-              development principles and best practices. This certification has
-              enabled me to build modern and responsive web applications with
-              confidence, and it has significantly enhanced my skills as a
-              frontend developer.
+              development principles and best practices. It has enabled me to
+              build modern and responsive web applications with confidence,
+              significantly enhancing my skills as a frontend developer. If
+              you'd like to see the certification, you can{" "}
+              <strong>view it using the button below</strong>.
             </p>
+
             <a
               href="https://drive.google.com/file/d/1wX59raysPufaHm-2JtMexqou86MogYIH/view?usp=drive_link"
               target="blank"
@@ -249,16 +297,44 @@ const About = () => {
             </a>
           </div>
           <div>
-            <img src={codecademy} alt="codecademy" />
-            <h3>Advanced Javascript</h3>
-            <p className="align">
-              The Advanced JavaScript course on Codecademy provided me with an
-              in-depth understanding of JavaScript concepts such as closures,
-              promises, and asynchronous programming. This certification has
-              helped me write cleaner and more efficient JavaScript code, and it
-              has expanded my capabilities as a frontend developer.
+            <img src={databaseCertMeta} alt="Meta Certification" />
+            <h3>Introduction to Databases</h3>
+            <p>
+              As a web developer, understanding databases is crucial for
+              creating efficient and dynamic applications. The Introduction to
+              Databases certification by Meta provided me with foundational
+              knowledge of database design, querying, and management. This
+              training enhanced my skills in integrating databases into web
+              applications, ensuring seamless data handling and storage
+              solutions. If you'd like to explore the certification further, you
+              can <strong>view it using the button below</strong>.
             </p>
-            <a href="" target="blank">
+
+            <a
+              href="https://drive.google.com/file/d/1Lx8CmYeDcAXCKVbVks6mvq5dffRlzw2x/view?usp=drive_link"
+              target="blank"
+            >
+              Click to View
+            </a>
+          </div>
+          <div>
+            <img src={cloudComputing} alt="IBM cloud Computing Cert" />
+            <h3>Introduction to Cloud Computing</h3>
+            <p>
+              Cloud computing is an essential skill for modern web development,
+              enabling scalability and flexibility in application deployment.
+              The Introduction to Cloud Computing certification by IBM provided
+              me with a solid understanding of cloud infrastructure, service
+              models, and deployment strategies. These skills have enhanced my
+              ability to build and manage cloud-integrated web applications
+              effectively. To learn more about this certification, you can
+              <strong>view it using the button below</strong>.
+            </p>
+
+            <a
+              href="https://drive.google.com/file/d/1zY-_trutyH-mn6LGDLYuk9U3CT9waXZ6/view?usp=drive_link"
+              target="blank"
+            >
               Click to View
             </a>
           </div>
@@ -272,7 +348,9 @@ const About = () => {
               journey as a web developer and provided me with a solid foundation
               to build upon. It has been instrumental in shaping my
               understanding of web technologies and preparing me for more
-              advanced coursework.
+              advanced coursework. To learn more about this certification, you
+              can
+              <strong>view it using the button below</strong>.
             </p>
             <a
               href="https://drive.google.com/file/d/1xBzoOF6HrXl8gUjBiBA7B8fs-n8KfphK/view?usp=sharing"
@@ -292,6 +370,8 @@ const About = () => {
               adapt seamlessly to various screen sizes and devices. This
               certification has been invaluable in ensuring that the websites I
               build provide a great user experience across different platforms.
+              To learn more about this certification, you can
+              <strong>view it using the button below</strong>.
             </p>
             <a
               href="https://drive.google.com/file/d/1bKBjdPtU_fvNbp9CSTgHEYoAq_7SXkqm/view?usp=sharing"

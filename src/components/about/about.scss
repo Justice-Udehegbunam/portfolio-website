@@ -308,14 +308,21 @@
     flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 4rem;
+    margin-left: 1rem;
+
+    @include tablet {
+      margin: 2rem;
+    }
 
     @include mobile {
       align-items: center;
       justify-content: center;
+      margin-left: unset;
     }
 
     div {
       width: 30%;
+      min-width: 350px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -329,6 +336,7 @@
       @include mobile {
         width: 350px;
         border-radius: 10px;
+        margin-bottom: 16px;
       }
       @include tablet {
         width: 30%;
@@ -338,6 +346,7 @@
       &:hover {
         transform: scale(1.05);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        will-change: transform;
       }
 
       img {
@@ -370,7 +379,7 @@
       }
 
       p {
-        font-size: 18px;
+        font-size: 16px;
         color: rgba(255, 255, 255, 0.6);
         padding: 0 10px;
         margin: 0;

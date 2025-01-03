@@ -67,12 +67,12 @@ export const Contact = () => {
 
         <motion.div className="item" variants={variants}>
           <h2>Address</h2>
-          <address>Block 46 flat 4 oluwole estate, Ogba.</address>
+          <address>Ogba Lagos St, Nigeria</address>
         </motion.div>
 
         <motion.div className="item" variants={variants}>
           <h2>Phone</h2>
-          <address>+234 916 194 8133</address>
+          <address>+2349161948133</address>
         </motion.div>
       </motion.div>
       <div className="formContainer">
