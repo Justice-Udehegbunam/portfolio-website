@@ -16,6 +16,10 @@
 }
 
 .about-content {
+  @include mobile {
+    margin: 0 8px;
+  }
+
   .about-hero {
     display: flex;
     flex-direction: row;
@@ -335,6 +339,7 @@
 
       @include mobile {
         width: 350px;
+        min-width: 300px;
         border-radius: 10px;
         margin-bottom: 16px;
       }
@@ -347,6 +352,10 @@
         transform: scale(1.05);
         box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
         will-change: transform;
+
+        @include mobile {
+          transform: unset;
+        }
       }
 
       img {
