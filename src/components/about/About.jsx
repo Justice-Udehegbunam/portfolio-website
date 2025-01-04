@@ -57,7 +57,7 @@ const About = () => {
   }, []);
 
   const text =
-    "Hello! I'm Justice Udehegbunam, a passionate frontend developer with expertise in building modern and responsive web applications. I enjoy working with technologies like React, SCSS, and Tailwind CSS. Here are some of the skills I specialize in:";
+    "Hello! I'm Justice Udehegbunam, a versatile full-stack developer specializing in both frontend and backend development. I excel at building modern, responsive user interfaces with React, SCSS, and Tailwind CSS, as well as robust backend solutions using Node.js and various databases. Here are some of the skills I excel in:";
 
   return (
     <div className="about-container">
